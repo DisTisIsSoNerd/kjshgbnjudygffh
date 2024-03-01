@@ -51,10 +51,7 @@ module.exports = {
                 .setFooter({ text: `Requested by ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL() })
                 .setColor('#36393f')
                 
-            const message = await interaction.reply({ embeds: [embed], fetchReply: true });
-            setTimeout(() => {
-                message.delete();
-            }, 5 * 60 * 1000);
+            interaction.reply({ embeds: [embed], fetchReply: true });
         }
     }    
 };
